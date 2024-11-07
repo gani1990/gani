@@ -16,8 +16,17 @@ pipeline {
       git branch: 'main', credentialsId: 'github', url: 'https://github.com/gani1990/gani/'
        }
     }
-   
- 
+
+    
+    stage("SonarQube Analysis"){
+      steps{
+        script{
+          withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token'){
+         sh "mvn sonar:sonar"
+          }
+      }
+    }                         
   }
   
+}
 }
