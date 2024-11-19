@@ -13,6 +13,10 @@ public class Greeter {
   }
 
   //TODO: Add javadoc comment
+/**
+ * This is a method.
+ */
+  
   public String greet(String someone) {
     return String.format("Hello, %s!", someone);
   }
