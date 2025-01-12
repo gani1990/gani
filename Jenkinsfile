@@ -11,7 +11,7 @@ stages{
       cleanWs()
           }
       }
-}
+
 
  stage("Checkout from SCM"){
       steps{
